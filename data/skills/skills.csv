@@ -1,0 +1,45 @@
+skill,category
+Python,Programming
+Java,Programming
+C++,Programming
+C,Programming
+JavaScript,Programming
+SQL,Database
+MySQL,Database
+PostgreSQL,Database
+MongoDB,Database
+Pandas,Data Science
+NumPy,Data Science
+Scikit-learn,Machine Learning
+TensorFlow,Machine Learning
+PyTorch,Machine Learning
+Machine Learning,Machine Learning
+Deep Learning,Machine Learning
+NLP,Natural Language Processing
+Natural Language Processing,Natural Language Processing
+Power BI,Data Visualization
+Tableau,Data Visualization
+Matplotlib,Data Visualization
+Seaborn,Data Visualization
+AWS,Cloud
+Azure,Cloud
+Google Cloud,Cloud
+Docker,DevOps
+Git,DevOps
+GitHub,DevOps
+Linux,Operating Systems
+React,Web Development
+Node.js,Web Development
+HTML,Web Development
+CSS,Web Development
+Adobe Photoshop,Design
+Adobe Illustrator,Design
+Illustrator,Design
+InDesign,Design
+Figma,Design
+UI Design,Design
+Typography,Design
+Branding,Design
+Graphic Design,Design
+Visual Communication,Design
+Creative Design,Design

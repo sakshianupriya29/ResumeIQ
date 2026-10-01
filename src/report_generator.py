@@ -1,0 +1,206 @@
+from datetime import datetime
+
+
+def generate_analysis_report(results):
+    """
+    Generate a downloadable text report from
+    ResumeIQ analysis results.
+    """
+
+    report = []
+
+    report.append("=" * 70)
+    report.append("                    RESUMEIQ")
+    report.append("          RESUME INTELLIGENCE REPORT")
+    report.append("=" * 70)
+
+    report.append(
+        f"\nGenerated: "
+        f"{datetime.now().strftime('%d %B %Y, %I:%M %p')}"
+    )
+
+    # --------------------------------------------------
+    # Match Overview
+    # --------------------------------------------------
+
+    report.append("\n")
+    report.append("=" * 70)
+    report.append("MATCH OVERVIEW")
+    report.append("=" * 70)
+
+    report.append(
+        f"Overall Match Score: "
+        f"{results['match_score']}%"
+    )
+
+    report.append(
+        f"Skill Match: "
+        f"{results['skill_match_percentage']}%"
+    )
+
+    report.append(
+        f"ATS-Style Keyword Coverage: "
+        f"{results['ats_keyword_coverage']}%"
+    )
+
+    # --------------------------------------------------
+    # Matching Skills
+    # --------------------------------------------------
+
+    report.append("\n")
+    report.append("=" * 70)
+    report.append("MATCHING SKILLS")
+    report.append("=" * 70)
+
+    if results["matching_skills"]:
+
+        for skill in results["matching_skills"]:
+            report.append(f"✓ {skill}")
+
+    else:
+        report.append("No matching skills detected.")
+
+    # --------------------------------------------------
+    # Missing Skills
+    # --------------------------------------------------
+
+    report.append("\n")
+    report.append("=" * 70)
+    report.append("MISSING SKILLS")
+    report.append("=" * 70)
+
+    if results["missing_skills"]:
+
+        for skill in results["missing_skills"]:
+            report.append(f"✗ {skill}")
+
+    else:
+        report.append("No missing skills detected.")
+
+    # --------------------------------------------------
+    # Additional Skills
+    # --------------------------------------------------
+
+    report.append("\n")
+    report.append("=" * 70)
+    report.append("ADDITIONAL SKILLS")
+    report.append("=" * 70)
+
+    if results["additional_skills"]:
+
+        for skill in results["additional_skills"]:
+            report.append(f"+ {skill}")
+
+    else:
+        report.append("No additional skills detected.")
+
+    # --------------------------------------------------
+    # ATS Analysis
+    # --------------------------------------------------
+
+    report.append("\n")
+    report.append("=" * 70)
+    report.append("ATS-STYLE KEYWORD ANALYSIS")
+    report.append("=" * 70)
+
+    report.append(
+        f"Total Job Keywords: "
+        f"{results['ats_total_keywords']}"
+    )
+
+    report.append(
+        f"Matched Keywords: "
+        f"{len(results['ats_matched_keywords'])}"
+    )
+
+    report.append(
+        f"Missing Keywords: "
+        f"{len(results['ats_missing_keywords'])}"
+    )
+
+    report.append("\nMatched Keywords:")
+
+    for keyword in results["ats_matched_keywords"]:
+        report.append(f"✓ {keyword}")
+
+    report.append("\nMissing Keywords:")
+
+    for keyword in results["ats_missing_keywords"]:
+        report.append(f"✗ {keyword}")
+
+    # --------------------------------------------------
+    # Resume Statistics
+    # --------------------------------------------------
+
+    report.append("\n")
+    report.append("=" * 70)
+    report.append("RESUME PROFILE")
+    report.append("=" * 70)
+
+    report.append(
+        f"Word Count: "
+        f"{results['word_count']}"
+    )
+
+    report.append(
+        f"Character Count: "
+        f"{results['character_count']}"
+    )
+
+    report.append(
+        f"Project Count: "
+        f"{results['project_count']}"
+    )
+
+    # --------------------------------------------------
+    # Resume Sections
+    # --------------------------------------------------
+
+    report.append("\n")
+    report.append("=" * 70)
+    report.append("RESUME SECTIONS")
+    report.append("=" * 70)
+
+    for section, detected in results[
+        "detected_sections"
+    ].items():
+
+        status = "✓" if detected else "✗"
+
+        report.append(
+            f"{status} {section}"
+        )
+
+    # --------------------------------------------------
+    # Recommendations
+    # --------------------------------------------------
+
+    report.append("\n")
+    report.append("=" * 70)
+    report.append("RECOMMENDATIONS")
+    report.append("=" * 70)
+
+    for index, recommendation in enumerate(
+        results["recommendations"],
+        start=1
+    ):
+
+        report.append(
+            f"{index}. {recommendation}"
+        )
+
+    # --------------------------------------------------
+    # Footer
+    # --------------------------------------------------
+
+    report.append("\n")
+    report.append("=" * 70)
+    report.append(
+        "Generated by ResumeIQ"
+    )
+    report.append(
+        "AI-Powered Resume Intelligence & Job Matching"
+    )
+    report.append("=" * 70)
+
+    return "\n".join(report)
