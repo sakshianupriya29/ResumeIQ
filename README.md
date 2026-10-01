@@ -5,7 +5,16 @@
 [![Open ResumeIQ](https://img.shields.io/badge/Live%20Demo-ResumeIQ-success?style=for-the-badge)](https://resumeiq-app.streamlit.app/)
 
 AI-powered resume intelligence and job matching platform built with Python, NLP, Scikit-learn, and Streamlit.
+## Tech Stack
 
+- **Language:** Python
+- **Frontend & Deployment:** Streamlit
+- **Machine Learning:** Scikit-learn
+- **NLP:** TF-IDF, Cosine Similarity
+- **Data Processing:** Pandas, NumPy
+- **PDF Processing:** PyPDF
+- **Data Visualization:** Matplotlib
+- **Version Control:** Git, GitHub
 ### AI-Powered Resume Intelligence & Job Matching Platform
 
 ResumeIQ is a Python and Streamlit-based resume intelligence platform that analyzes resumes against job descriptions using NLP techniques.
