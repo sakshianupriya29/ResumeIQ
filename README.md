@@ -1,4 +1,10 @@
-# 📄 ResumeIQ
+# ResumeIQ
+
+### 🚀 Live Demo
+
+[![Open ResumeIQ](https://img.shields.io/badge/Live%20Demo-ResumeIQ-success?style=for-the-badge)](https://resumeiq-app.streamlit.app/)
+
+AI-powered resume intelligence and job matching platform built with Python, NLP, Scikit-learn, and Streamlit.
 
 ### AI-Powered Resume Intelligence & Job Matching Platform
 
