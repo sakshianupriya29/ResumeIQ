@@ -108,6 +108,28 @@ Charts can also be downloaded from the application.
 
 ---
 
+## 📸 Screenshots
+
+### Resume Analyzer
+![Resume Analyzer](screenshots/01_resume_analyzer.png)
+
+### Match & Skill Analysis
+![Match and Skills](screenshots/02_match_and_skills.png)
+
+### Skill Coverage
+![Skill Coverage](screenshots/03_skill_coverage.png)
+
+### ATS-Style Keyword Analysis
+![ATS Analysis](screenshots/04_ats_analysis.png)
+
+### Resume Profile
+![Resume Profile](screenshots/05_resume_profile.png)
+
+### Multiple Job Comparison
+![Job Comparison](screenshots/06_job_comparison.png)
+
+---
+
 ### 💼 Multiple Job Comparison
 
 Users can compare a resume against multiple job descriptions.
